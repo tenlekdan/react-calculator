@@ -1,9 +1,9 @@
 import React from 'react'
-
+import style from './Display.module.css';
 function Display({text}) {
     return (
-        <div>
-            <div>{text}</div>
+        <div className={style.display__container}>
+            <div className={style.display__text}>{text}</div>
         </div>
     )
 }

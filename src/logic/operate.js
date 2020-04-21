@@ -1,11 +1,11 @@
 
 const operate = (one, two, operator)=>{
 
-    let num1 = parseFloat(one)
-    let num2 = parseFloat(two)
+    let num1 = one ? parseFloat(one) : 0;
+    let num2 = two ? parseFloat(two) : operator === 'x' || operator === '÷' ? 1: 0;
     
     let result;
-    console.log(num1, num2, operator);
+    console.log(`num1: ${num1},  num2: ${num2}, operator: ${operator}`);
 
     if(operator === '+'){ 
         result = num1 + num2;
@@ -19,7 +19,7 @@ const operate = (one, two, operator)=>{
         result = num1 * num2;
     }
 
-    if(operator === '/'){
+    if(operator === '÷'){
         result = num1 / num2;
     }
 
